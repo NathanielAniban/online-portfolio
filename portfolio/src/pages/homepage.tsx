@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Github, ArrowRight } from "lucide-react";
 import formalImage from '../assets/formal-image.png';
 import TypingEffect from "../components/typing-effect";
 import { useNavigate } from "react-router-dom";
@@ -74,6 +74,9 @@ export default function Homepage() {
             </Link>
             <Link to="https://www.linkedin.com/in/nathaniel-aniban-48643a287/" target="_blank">
               <Linkedin className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
+            </Link>
+            <Link to="https://github.com/NathanielAniban" target="_blank">
+              <Github className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25}/>
             </Link>
           </section>
         </section>
