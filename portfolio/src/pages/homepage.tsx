@@ -3,6 +3,7 @@ import formalImage from '../assets/formal-image.png';
 import TypingEffect from "../components/typing-effect";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Resume from '/Resume.pdf';
 export default function Homepage() {
   const navigate = useNavigate();
 
@@ -46,11 +47,13 @@ export default function Homepage() {
 
           {/* Buttons */}
           <section className="flex justify-center md:justify-start gap-4 mb-10">
-            <button className="lg:text-base font-medium tracking-tight bg-gray-200 
-              hover:scale-105 hover:bg-gray-300 active:bg-gray-400 active:scale-95 transition ease-in-out duration-150 
-              rounded shadow px-5 py-2">
-              Download CV
-            </button>
+            <Link to={Resume} target="_blank">
+              <button className="lg:text-base font-medium tracking-tight bg-gray-200 
+                hover:scale-105 hover:bg-gray-300 active:bg-gray-400 active:scale-95 transition ease-in-out duration-150 
+                rounded shadow px-5 py-2">
+                Download CV
+              </button>
+            </Link>
             <button 
               onClick={() => navigate('/about')}
               className="lg:text-base font-medium tracking-tight bg-gray-800 
