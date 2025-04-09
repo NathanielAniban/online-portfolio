@@ -168,14 +168,16 @@ const Certificates = [
     
       return (
         <>
-          <ol className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <ol className="grid  lg:grid-cols-2 gap-2 overflow-y-scroll overflow-x-hidden h-[40vh]">
             {Certificates.map((certificate, index) => (
               <li
                 key={index}
                 onClick={() => handleOpenModal(certificate.path)}
-                className="cursor-pointer bg-white flex gap-2 shadow-md rounded-lg p-4 m-2 hover:scale-105 hover:bg-gray-50 active:bg-gray-100 active:scale-95 transition duration-150 ease-in-out"
+                className="cursor-pointer bg-gray-50 flex shadow-md rounded-lg p-2 mx-1
+                hover:scale-105 hover:bg-gray-50 active:bg-gray-100 
+                active:scale-95 transition duration-150 ease-in-out"
               >
-                <img src={certificate.imagePath} className="h-20" alt={certificate.name} />
+                <img src={certificate.imagePath} className="h-20 w-20" alt={certificate.name} />
                 <section>
                   <h5 className="text-sm/4 font-medium">{certificate.name}</h5>
                   <h6 className="text-xs font-medium text-gray-500">{certificate.type}</h6>

@@ -11,12 +11,12 @@ export default function Homepage() {
     <section className="relative h-[80vh] flex flex-col">
       <section className="flex flex-col md:grid md:grid-cols-2 flex-1">
         {/* Left Section */}
-        <section className="relative mx-3 sm:mx-6 md:ml-10 lg:ml-20 xl:ml-20 flex flex-col justify-center text-center md:text-start py-10 z-20">
-          <p className="text-sm md:text-base xl:text-lg font-medium text-gray-600 uppercase mb-2">
+        <section className="relative mx-3 sm:mx-6 md:ml-10 lg:ml-20 xl:ml-20 flex flex-col justify-center text-center md:text-start sm:py-10 z-20">
+          <p className="text-xs md:text-base xl:text-lg font-medium text-gray-600 uppercase mb-2">
             Hello there, welcome to my site
           </p>
 
-          <h1 className="text-xl/2 md:text-3xl xl:text-5xl font-bold tracking-tight uppercase whitespace-nowrap mb-2">
+          <h1 className="text-sm/1 sm:text-xl/2 md:text-3xl xl:text-5xl font-bold tracking-tight uppercase whitespace-nowrap mb-2">
             My Name is&nbsp;
             <TypingEffect 
               text="Nathaniel Aniban"
@@ -28,7 +28,7 @@ export default function Homepage() {
             />
           </h1>
 
-          <p className="text-md md:text-3xl xl:text-4xl font-bold tracking-tight uppercase mb-5">
+          <p className="text-sm/3 sm:text-md md:text-3xl xl:text-4xl font-bold tracking-tight uppercase mb-5">
             <TypingEffect 
               text="Your Full Stack Web Developer"
               speed={50}
@@ -40,7 +40,7 @@ export default function Homepage() {
           {/* Mobile Image */}
           <img src={formalImage} alt="Formal" className="block md:hidden h-[38vh] mx-auto mb-5" />
 
-          <p className="md:text-md xl:text-lg font-medium text-gray-700 mb-10 break-words">
+          <p className="text-sm md:text-md xl:text-lg font-medium text-gray-700 mb-10 break-words">
             I am a web developer with a passion for creating beautiful and functional websites. I specialize in frontend development,
             and I love working with the latest technologies to build responsive and user-friendly web applications.
           </p>
@@ -48,7 +48,7 @@ export default function Homepage() {
           {/* Buttons */}
           <section className="flex justify-center md:justify-start gap-4 mb-10">
             <Link to={Resume} target="_blank">
-              <button className="lg:text-base font-medium tracking-tight bg-gray-200 
+              <button className="text-sm lg:text-base font-medium tracking-tight bg-gray-200 
                 hover:scale-105 hover:bg-gray-300 active:bg-gray-400 active:scale-95 transition ease-in-out duration-150 
                 rounded shadow px-5 py-2">
                 Download CV
@@ -56,7 +56,7 @@ export default function Homepage() {
             </Link>
             <button 
               onClick={() => navigate('/about')}
-              className="lg:text-base font-medium tracking-tight bg-gray-800 
+              className="text-sm lg:text-base font-medium tracking-tight bg-gray-800 
               hover:scale-105 hover:bg-gray-900 active:bg-black active:scale-95 transition ease-in-out duration-150 
               rounded px-5 py-2 text-white flex items-center gap-2"
             >
