@@ -53,12 +53,12 @@ const NavigationBar = () => {
             openNav ? "translate-y-0 opacity-100 visible" : "-translate-y-5 opacity-0 invisible"
           } absolute md:static left-0 top-16 w-full md:w-auto flex flex-col md:flex-row items-center gap-4 p-4 md:p-0 bg-gray-50 md:bg-transparent transition-all duration-300 ease-in-out md:translate-y-0 md:opacity-100 md:visible`}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-8 w-full md:w-auto">
+          <ul className="flex flex-col md:flex-row md:gap-5 w-full md:w-auto">
             {navItems.map((item) => (
               <li
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`cursor-pointer py-2 px-3 rounded-md text-center md:text-left transition-colors ${
+                className={`cursor-pointer py-2 rounded-md text-center md:text-left transition-colors ${
                   location.pathname === item.path
                     ? "text-blue-600 font-semibold underline"
                     : "text-gray-700 hover:text-blue-500"
