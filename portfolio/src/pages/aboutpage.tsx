@@ -43,12 +43,18 @@ export default function AboutPage() {
         {/* Mobile Image */}
         <img src={formalImage} alt="Formal" className="block md:hidden h-[38vh] mx-auto mb-5" />
   
-        <p className="md:text-md xl:text-lg font-medium text-gray-700 mb-10 break-words">
+        <p className="md:text-md xl:text-lg font-medium text-gray-700 mb-3 break-words">
           I am a web developer with a passion for creating beautiful and functional websites. 
           I specialize in frontend development, and I love working with the latest technologies 
           to build responsive and user-friendly web applications.
         </p>
-  
+
+        <Link to="https://www.credly.com/users/nathaniel-aniban" target="_blank">
+          <button className="bg-emerald-800 hover:bg-emerald-900 hover:scale-105 text-white px-3 py-2 rounded text-base font-medium transition ease-in-out duration-150 mb-10">
+            Checkout my Badges on Credly
+          </button>
+        </Link>
+
         {/* Social Icons */}
         <section className="flex items-center justify-center md:justify-start gap-8">
             <Link to="https://www.facebook.com/Aniban.Nathaniel" target="_blank">
