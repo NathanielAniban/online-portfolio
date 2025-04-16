@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 
 interface WorksProperties {
     title: string;
+    linkTitle: string;
     img: string;
     article: string;
     link: string;
     figureTitle: string,
   }
 
-function Works({ title, img, article, figureTitle, link }: WorksProperties) {
+function Works({ title, img, article, figureTitle, linkTitle, link }: WorksProperties) {
     return (
       <article className='block p-5'>
         <h1 className='text-xl font-extrabold mb-3'>{title}</h1>
@@ -27,7 +28,7 @@ function Works({ title, img, article, figureTitle, link }: WorksProperties) {
         />
           <Link to={link} target='_blank'>
             <button className='text-base font-medium mx-2 w-full md:w-auto bg-gray-800 hover:scale-110 hover:bg-gray-900 active:scale-95 active:bg-black cursor-pointer transition ease-in-out duration-150 text-white px-3 py-1 rounded'>
-              Check our website
+              {linkTitle}
             </button>
           </Link>
         </figure>
@@ -51,6 +52,7 @@ export default function WorkPage(){
                             '
                 link={'https://athleticmma.online'}
                 figureTitle='Figure 1: ATHLETIC MMA'
+                linkTitle="Visit our Website"
                 />
 
                 <Works
@@ -65,6 +67,7 @@ export default function WorkPage(){
                             '
                 link={'https://chatapp-chi-three.vercel.app'}
                 figureTitle='Figure 2: ChatApp'
+                linkTitle="Visit my Website"
                 />
                 <Works
                 title='3rd Project: Custom Authentication System'
@@ -72,6 +75,7 @@ export default function WorkPage(){
                 article='   This is a full-stack Authentication System built with a focus on security, speed, and developer-friendly implementation. It features a Single Page Application (SPA) using React/Vite + TypeScript for the frontend and CodeIgniter 4 (PHP Framework) for the backend API.'
                 link={'https://github.com/NathanielAniban/auth_w_security'}
                 figureTitle='Figure 3: Custom Authentication System'
+                linkTitle="Check out my Code"
                 />
             </section>
         </section>
