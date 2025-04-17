@@ -1,131 +1,148 @@
 import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 import formalImage from '../assets/formal-image.png';
 import TypingEffect from "../components/typing-effect";
-import IconsCarousel from "../components/icons-carousel";
+
 import CertificateShowcase from "../components/CertificateShowcase";
 import { Link } from "react-router-dom";
 export default function AboutPage() {
   return (
-    <section className="relative h-[80vh] flex flex-col">
-    <section className="flex flex-row w-full max-w-screen-xl mx-auto px-0">
-      {/* Left Section */}
-      <section className="relative hidden md:flex w-[100vh] flex-col justify-center text-center md:text-start py-10 z-20">
-        <img src={formalImage} alt="Formal" className="hidden md:block h-[38vh] mx-auto mb-5" />
-      </section>
-  
-      {/* Right Section */}
-      <section className="relative flex flex-col justify-center text-center md:text-start sm:py-10 z-20 w-full px-4">
-        <p className="text-sm md:text-base xl:text-lg font-medium text-gray-600 uppercase mb-2">
-          About myself
-        </p>
-  
-        <h1 className="text-xl/2 md:text-3xl xl:text-5xl font-bold tracking-tight uppercase whitespace-nowrap mb-2">
-          My Name is&nbsp;
-          <TypingEffect
-            text="Nathaniel Aniban"
-            speed={50}
-            delay={5000}
-            onRepeat={false}
-            cursorBlink={true}
-            cursorType="_"
-          />
-        </h1>
-  
-        <p className="text-md md:text-3xl xl:text-2xl font-bold tracking-tight uppercase mb-5">
-          <TypingEffect
-            text="Full Stack Web Developer"
-            speed={50}
-            delay={500}
-            cursorType=""
-          />
-        </p>
-  
-        {/* Mobile Image */}
-        <img src={formalImage} alt="Formal" className="block md:hidden h-[38vh] mx-auto mb-5" />
-  
-        <p className="text-sm md:text-md xl:text-lg font-medium text-gray-700 mb-3 break-words">
-          I am a web developer with a passion for creating beautiful and functional websites. 
-          I specialize in frontend development, and I love working with the latest technologies 
-          to build responsive and user-friendly web applications.
-        </p>
+    <section className="relative flex flex-col sm:p-5 mb-10">
+      <article className="container mx-auto grid items-center justify-center p-4 md:p-10">
+        <section className="flex flex-col md:flex-row items-center gap-6">
 
-        <Link to="https://www.credly.com/users/nathaniel-aniban" target="_blank">
-          <button className="text-sm sm:text-base font-medium bg-emerald-800 hover:bg-emerald-900 hover:scale-105 text-white px-3 py-2 rounded transition ease-in-out duration-150 mb-5 sm:mb-10">
-            Checkout my Badges on Credly
-          </button>
-        </Link>
+          {/* Mobile View Intro Text */}
+          <section className="flex flex-col text-center md:hidden">
+            <p className="text-sm font-medium text-gray-500">Hello there!</p>
+            <TypingEffect
+              styleProp="text-2xl font-bold tracking-tight"
+              text="My Name is Nathaniel Aniban"
+              speed={50}
+              delay={3000}
+              onRepeat={false}
+              cursorBlink={true}
+              cursorType="_"
+            />
+            <TypingEffect
+              styleProp="text-lg font-medium"
+              text="Your Full Stack Web Developer"
+              speed={50}
+              delay={500}
+              cursorType=""
+            />
+          </section>
 
-        {/* Social Icons */}
-        <section className="flex items-center justify-center md:justify-start gap-8 mb-5">
-            <Link to="https://www.facebook.com/Aniban.Nathaniel" target="_blank">
-              <Facebook className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
-            </Link>
-            <Link to="https://www.instagram.com/urmirr0r_/" target="_blank">
-              <Instagram className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
-            </Link>
-            <Link to="https://www.linkedin.com/in/nathaniel-aniban-48643a287/" target="_blank">
-              <Linkedin className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
-            </Link>
-            <Link to="https://github.com/NathanielAniban" target="_blank">
-              <Github className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25}/>
-            </Link>
+          {/* Profile Image */}
+          <img
+            src={formalImage}
+            alt="Profile"
+            className="h-80 rounded-full shadow-lg my-5"
+          />
+
+          {/* Desktop View Intro Text + Description */}
+          <section className="flex flex-col items-start text-left">
+            <section className="hidden md:block">
+              <p className="text-sm font-medium text-gray-500">Hello there!</p>
+              <TypingEffect
+                styleProp="text-2xl font-bold tracking-tight"
+                text="My Name is Nathaniel Aniban"
+                speed={50}
+                delay={3000}
+                onRepeat={false}
+                cursorBlink={true}
+                cursorType="_"
+              />
+              <br />
+              <TypingEffect
+                styleProp="text-lg font-medium"
+                text="Your Full Stack Web Developer"
+                speed={50}
+                delay={500}
+                cursorType=""
+              />
+            </section>
+
+            <p className="max-w-xl text-sm md:text-base font-medium text-gray-700 mt-4">
+              I am a web developer with a passion for creating beautiful and functional websites. I specialize in frontend development,
+              and I love working with the latest technologies to build responsive and user-friendly web applications.
+            </p>
+
+            {/* Social Links */}
+            <section className="flex gap-4 mt-4">
+              <Link to="https://www.facebook.com/Aniban.Nathaniel" target="_blank">
+                <Facebook className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
+              </Link>
+              <Link to="https://www.instagram.com/urmirr0r_/" target="_blank">
+                <Instagram className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
+              </Link>
+              <Link to="https://www.linkedin.com/in/nathaniel-aniban-48643a287/" target="_blank">
+                <Linkedin className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
+              </Link>
+              <Link to="https://github.com/NathanielAniban" target="_blank">
+                <Github className="text-gray-800 hover:text-gray-600 cursor-pointer" size={25} />
+              </Link>
+            </section>
+          </section>
         </section>
-      </section>
+      </article>
+
+      <article className="container self-center grid p-4 md:p-10">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* Education & Work Experience */}
+          <section className="space-y-6">
+
+            {/* Educational Attainment */}
+            <section>
+              <h5 className="text-base font-medium mb-2 2xl:text-2xl 2xl:font-extrabold">
+                Educational Attainment
+              </h5>
+              <section>
+                <h6 className="text-base font-medium uppercase">AMACC Pasig</h6>
+                <p className="text-sm font-medium text-gray-700">
+                  2021 – 2025 | Bachelor of Science in Information Technology
+                </p>
+                <ul className="list-disc ms-5 mt-2 text-sm text-gray-700 space-y-1">
+                  <li>Student Council President 2024</li>
+                  <li>Major in Web Development</li>
+                  <li>Overall GWA: 1.14</li>
+                </ul>
+              </section>
+            </section>
+
+            {/* Work Experience */}
+            <section>
+              <h5 className="text-base font-medium mb-2 2xl:text-2xl 2xl:font-extrabold">
+                Work Experience
+              </h5>
+              <section>
+                <h6 className="text-base font-medium uppercase">AMA Computer College</h6>
+                <p className="text-xs font-medium uppercase underline mb-3">
+                  2nd Floor Chipeco Building, Corner Shaw Blvd, San Antonio, Pasig City
+                </p>
+                <p className="text-sm font-medium text-gray-700">
+                  OJT IT INTERN | September 2024 – January 2025
+                </p>
+                <ul className="list-disc ms-5 mt-2 text-sm text-gray-700 space-y-1">
+                  <li>Troubleshooting software and hardware issues</li>
+                  <li>Installed classroom management software</li>
+                  <li>Assisted staff in device setup</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+
+          {/* Certificates */}
+          <section>
+            <h5 className="text-base font-medium mb-3 2xl:text-2xl 2xl:font-extrabold">
+              Certificates
+            </h5>
+            <CertificateShowcase />
+          </section>
+
+        </section>
+      </article>
+
     </section>
-  
-    <article className="w-full max-w-screen-xl mx-auto grid md:grid-cols-2 justify-center px-4">
-      <section className="flex flex-col items-center justify-center">
-        {/* Educational Attainment */}
-        <section className="relative text-start mb-2">
-          <h1 className="text-base sm:text-xl font-bold">Educational Attainment</h1>
-          <ol>
-            <li className="mb-3 sm:mb-10 ms-4">
-              <li className="list-disc mb-1 text-sm font-normal my-1 leading-none text-gray-400 dark:text-gray-500">
-                <time>
-                  September 2024 - October 2025
-                </time>
-              </li>
-              <h3 className="text-sm sm:text-lg/5 font-semibold tracking-tight text-gray-900 dark:text-white mb-3">
-                Bachelor of Science in Information Technology - AMA Computer College
-              </h3>
-              <ol className="text-sm sm:text-base list-disc mx-5 font-normal text-gray-500 dark:text-gray-400">
-                <li>Presidential Lister from 1st Year to 3rd Year Trimestral</li>
-                <li>Student Council President from September to December 2024</li>
-                <li>Overall GWA: 1.14</li>
-              </ol>
-            </li>
-          </ol>
-        </section>
-        {/* Work Experience */}
-        <section className="relative text-start">
-          <h1 className="text-base sm:text-xl font-bold">Work Experience</h1>
-          <ol>
-            <li className="mb-3 sm:mb-10 ms-4">
-              <li className="list-disc mb-1 text-sm font-normal my-1 leading-none text-gray-400 dark:text-gray-500">
-                <time>
-                  September 2024 - January 2025
-                </time>
-              </li>
-              <h3 className="text-sm sm:text-lg/5 tracking-tight font-semibold text-gray-900 dark:text-white mb-3">
-                On The Job Trainee | IT INTERN - AMA Computer College
-              </h3>
-              <p className="text-sm sm:text-base font-normal text-gray-500 dark:text-gray-400">
-                Helps on troubleshooting software and hardware issues, installing classroom management software, 
-                and helps employees set up devices they needed.
-              </p>
-            </li>
-          </ol>
-        </section>
-      </section>
-      <section className="relative">
-          <h1 className="text-medium text-center font-medium underline mb-5">Certifications</h1>
-          <CertificateShowcase/>
-        </section>
-    </article>
-    <article className="w-full max-w-screen-xl mx-auto grid justify-center px-4">
-      <IconsCarousel/>
-    </article>
-  </section>
-  
+
   )
 }

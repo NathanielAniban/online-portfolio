@@ -8,8 +8,8 @@ export default function TechSkillShowcase(){
       const techStack = [
           { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
           { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-          { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+          { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "Windows", logo: "https://cdn.worldvectorlogo.com/logos/windows.svg"},
           { name: "Apache", logo: "https://cdn.worldvectorlogo.com/logos/apache-13.svg"},
           { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
@@ -24,66 +24,74 @@ export default function TechSkillShowcase(){
       ];
 
     return(
-        <section className="container flex flex-col items-center justify-center relative sm:mx-auto">
-            <section className="container-fluid grid sm:grid-cols-2 sm:mx-auto gap-5 justify-center">
-                <article className="flex flex-col items-center">
-                    <h5 className="text-base font-medium mb-2">My Tech Stack:</h5>
-                    <ol className="grid grid-cols-4 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-2 scale-[98%] md:scale-none">
-                        {techStack.map((lang, index) => (
-                            <li key={index} className="flex flex-nowrap gap-2 mb-2">
-                                <img src={lang.logo} alt={lang.name} className={`size-5 md:size-6 ${lang.name == 'Apache' && 'relative top-2'}`} />
-                                <p className="text-sm md:text-base font-medium">{lang.name}</p>
-
-                            </li>
-                        ))}
-                    </ol>
-                    <h5 className="text-base font-medium mb-2">Framework i'm familliar:</h5>
-                    <ol className="flex flex-wrap scale-[98%] md:scale-none">
-                        {Frameworks.map((lang, index) => (
-                            <li key={index} className="flex mx-2 gap-2 mb-2">
-                                <img src={lang.logo} alt={lang.name} className="size-5 md:size-6" />
-                                <p className="text-sm md:text-base font-medium">{lang.name}</p>
-
-                            </li>
-                        ))}
-                    </ol>
-                </article>
-                <article className="flex flex-col items-center">
-                   <h5 className="text-base font-medium mb-3">My Projects</h5>
-                   <section className='grid sm:grid-cols-2 gap-2 mb-5 justify-center mx-5'> 
-                    <caption className='p-2 shadow-xl border rounded flex flex-col items-start'>
-                        <img src={AthleticMMA} alt="" className='size-100 rounded' />
-                        <figcaption className='text-sm font-medium mx-auto my-2'>Figure 1: Athletic MMA Landing Page</figcaption>
-                        <p className='text-xs font-medium text-gray-500 mx-2 max-w-90 text-start line-clamp-3 mb-3'>
-                        Athletic MMA is an E-Commerce Website that offers exclusive gym offers, trainings, and classes by combining combining fitness, bodybuilding and self defense training.
-                        In the early stages of web development this is a <strong>Gym Membership Management Website</strong>
-                        </p>
-                        <p className='text-xs font-medium mx-2 mb-1'>Status: N/A</p>
-                        <Link to={'/work'} className='text-sm font-medium px-2 py-1 mx-2 mb-3 bg-black text-white rounded'>
-                            Learn more
-                        </Link>
-                    </caption>
-
-                    <caption className='p-2 shadow-xl border rounded flex flex-col items-start'>
-                        <img src={ChatApp} alt="" className='size-100 rounded' />
-                        <figcaption className='text-sm font-medium mx-auto my-2'>Figure 1: ChatApp Landing Page</figcaption>
-                        <p className='text-xs font-medium text-gray-500 mx-2 max-w-90 text-start line-clamp-3 mb-3'>
-                            ChatApp is a Web Chat Application where you can communicate with others fast and easy. This is one of my personal project where i build a web application that
-                            can be use for communication with real-time features. This website uses <strong>Firebase</strong> as a backend for user authentication and a database for chats and
-                            messages.
-                        </p>
-                        <p className='text-xs font-medium mx-2'>Status: N/A</p>
-                        <Link to={'/work'} className='text-sm font-medium px-2 py-1 mx-2 mb-3 bg-black text-white rounded mt-2'>
-                            Learn more
-                        </Link>
-                    </caption>
-                   </section>
-
-                </article>
-
-
-
+        <section className="container mx-auto px-4 md:py-8">
+        <section className="grid lg:grid-cols-2 gap-2">
+          {/* Tech Stack + Frameworks */}
+          <article className="flex flex-col items-center">
+            <h5 className="text-base font-medium mb-2">My Tech Stack:</h5>
+            <ol className="grid grid-cols-4 gap-2 mb-4">
+              {techStack.map((lang, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-center gap-1 px-4 bg-gray-800 text-white p-2 rounded-full hover:scale-105 transition duration-300 cursor-pointer"
+                >
+                  <img
+                    src={lang.logo}
+                    alt={lang.name}
+                    className={`size-4 sm:size-6 ${
+                      ['Express', 'Windows'].includes(lang.name) ? 'invert' : ''
+                    } ${lang.name === 'Apache' ? 'relative top-1 sm:top-2' : ''}`}
+                  />
+                  <p className="text-xs font-medium hidden sm:block">{lang.name}</p>
+                </li>
+              ))}
+            </ol>
+      
+            <h5 className="text-base font-medium mb-2">Frameworks I'm Familiar With:</h5>
+            <ol className="flex flex-wrap justify-center gap-2 scale-90 mb-4">
+              {Frameworks.map((lang, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-center gap-1 bg-gray-800 text-white py-3 px-5 rounded-full hover:scale-105 transition duration-300 cursor-pointer"
+                >
+                  <img src={lang.logo} alt={lang.name} className="size-4 sm:size-6" />
+                  <p className="text-xs font-medium hidden sm:block">{lang.name}</p>
+                </li>
+              ))}
+            </ol>
+          </article>
+      
+          {/* Projects Section */}
+          <article className="flex flex-col items-center">
+            <h5 className="text-base font-medium mb-4">My Projects</h5>
+            <section className="grid sm:grid-cols-2 gap-4 w-full">
+              {[{
+                img: AthleticMMA,
+                title: 'Athletic MMA Landing Page',
+                desc: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
+                       It's a Gym Membership Management Website combining fitness, bodybuilding, and self-defense training.`,
+                status: 'Done'
+                    }, {
+                img: ChatApp,
+                title: 'ChatApp Landing Page',
+                desc: `ChatApp is a real-time web chat application with Firebase authentication and messaging.
+                       A personal project focused on seamless communication and modern tech.`,
+                status: 'N/A'
+              }].map((proj, i) => (
+                <figure key={i} className="p-3 border shadow-md rounded flex flex-col">
+                  <img src={proj.img} alt={proj.title} className="rounded mb-3" />
+                  <figcaption className="text-sm font-medium text-center mb-2">{proj.title}</figcaption>
+                  <p className="text-xs text-gray-500 font-medium line-clamp-3 mb-3">{proj.desc}</p>
+                  <p className="text-xs font-medium mb-2">Status: {proj.status}</p>
+                  <Link to="/work" className="text-sm font-medium bg-black text-white px-3 py-1 rounded self-start">
+                    Learn more
+                  </Link>
+                </figure>
+              ))}
             </section>
+          </article>
         </section>
+      </section>
+      
     );
 }
