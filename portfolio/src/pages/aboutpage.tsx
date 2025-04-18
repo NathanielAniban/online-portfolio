@@ -9,29 +9,25 @@ export default function AboutPage() {
     <section className="relative flex flex-col sm:p-5 mb-10">
       <article className="container mx-auto grid items-center justify-center p-4 md:p-10">
         <section className="flex flex-col md:flex-row items-center gap-6">
-
           {/* Mobile View Intro Text */}
           <section className="flex flex-col text-center md:hidden">
-          <p className="text-sm font-medium text-gray-500">Hello there!</p>
-              <p className="text-2xl/3 font-bold font-mono tracking-tight">
-                My Name is&nbsp;
-                <TypingEffect
-                  text="Nathaniel Aniban"
-                  speed={50}
-                  delay={5000}
-                  onRepeat={true}
-                  cursorBlink={true}
-                  cursorType="_"
-                />
-              </p>
-              <p className="text-lg font-medium font-mono tracking-tight">  
-                <TypingEffect
-                  text="Your Full Stack Web Developer"
-                  speed={50}
-                  delay={500}
-                  cursorType=""
-                />
-              </p>
+          <p className="text-sm text-gray-500">Hello there!</p>
+          <TypingEffect
+            styleProp="text-lg font-medium font-mono"
+            text="My Name is Nathaniel Aniban"
+            speed={50}
+            delay={3000}
+            onRepeat={false}
+            cursorBlink={true}
+            cursorType="_"
+          />
+          <TypingEffect
+            styleProp="text-sm/2 font-medium font-mono"
+            text="Your Full Stack Web Developer"
+            speed={50}
+            delay={500}
+            cursorType=""
+          />
           </section>
 
           {/* Profile Image */}
