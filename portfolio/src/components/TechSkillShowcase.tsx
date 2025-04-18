@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import AthleticMMA from '../assets/works/athletic-mma-background.png';
-import ChatApp from '../assets/works/chatapp-background.png';
 import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
 
 export default function TechSkillShowcase(){
