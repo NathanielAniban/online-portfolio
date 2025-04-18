@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
-import formalImage from '../assets/formal-image.png';
+import formalImage from '../assets/Formal-photo.jpg';
 import TypingEffect from "../components/typing-effect";
 
 import CertificateShowcase from "../components/CertificateShowcase";
@@ -12,58 +12,64 @@ export default function AboutPage() {
 
           {/* Mobile View Intro Text */}
           <section className="flex flex-col text-center md:hidden">
-            <p className="text-sm font-medium text-gray-500">Hello there!</p>
-            <TypingEffect
-              styleProp="text-2xl font-bold tracking-tight"
-              text="My Name is Nathaniel Aniban"
-              speed={50}
-              delay={3000}
-              onRepeat={false}
-              cursorBlink={true}
-              cursorType="_"
-            />
-            <TypingEffect
-              styleProp="text-lg font-medium"
-              text="Your Full Stack Web Developer"
-              speed={50}
-              delay={500}
-              cursorType=""
-            />
+          <p className="text-sm font-medium text-gray-500">Hello there!</p>
+              <p className="text-2xl/3 font-bold font-mono tracking-tight">
+                My Name is&nbsp;
+                <TypingEffect
+                  text="Nathaniel Aniban"
+                  speed={50}
+                  delay={5000}
+                  onRepeat={true}
+                  cursorBlink={true}
+                  cursorType="_"
+                />
+              </p>
+              <p className="text-lg font-medium font-mono tracking-tight">  
+                <TypingEffect
+                  text="Your Full Stack Web Developer"
+                  speed={50}
+                  delay={500}
+                  cursorType=""
+                />
+              </p>
           </section>
 
           {/* Profile Image */}
           <img
             src={formalImage}
             alt="Profile"
-            className="h-80 rounded-full shadow-lg my-5"
+            className="h-[25vh] rounded-full shadow-lg my-5"
           />
 
           {/* Desktop View Intro Text + Description */}
           <section className="flex flex-col items-start text-left">
             <section className="hidden md:block">
               <p className="text-sm font-medium text-gray-500">Hello there!</p>
-              <TypingEffect
-                styleProp="text-2xl font-bold tracking-tight"
-                text="My Name is Nathaniel Aniban"
-                speed={50}
-                delay={3000}
-                onRepeat={false}
-                cursorBlink={true}
-                cursorType="_"
-              />
-              <br />
-              <TypingEffect
-                styleProp="text-lg font-medium"
-                text="Your Full Stack Web Developer"
-                speed={50}
-                delay={500}
-                cursorType=""
-              />
+              <p className="text-2xl/3 font-bold font-mono tracking-tight">
+                My Name is&nbsp;
+                <TypingEffect
+                  text="Nathaniel Aniban"
+                  speed={50}
+                  delay={5000}
+                  onRepeat={true}
+                  cursorBlink={true}
+                  cursorType="_"
+                />
+              </p>
+              <p className="text-lg font-medium font-mono tracking-tight">  
+                <TypingEffect
+                  text="Your Full Stack Web Developer"
+                  speed={50}
+                  delay={500}
+                  cursorType=""
+                />
+              </p>
             </section>
 
-            <p className="max-w-xl text-sm md:text-base font-medium text-gray-700 mt-4">
-              I am a web developer with a passion for creating beautiful and functional websites. I specialize in frontend development,
-              and I love working with the latest technologies to build responsive and user-friendly web applications.
+            <p className="max-w-xl text-sm md:text-base font-medium text-gray-700 mt-4 font-mono">
+              My goal is to help you to <u className="hover:font-bold transition-all ease-in-out duration-150">create a startup</u>,&nbsp;
+              <u className="hover:font-bold transition-all ease-in-out duration-150">implement a design</u>, and <u className="hover:font-bold transition-all ease-in-out duration-150">create a web page</u> that's suitable for your
+              business ideas.
             </p>
 
             {/* Social Links */}

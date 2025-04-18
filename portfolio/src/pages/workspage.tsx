@@ -54,7 +54,7 @@ export default function WorkPage(){
                             '
                 link={'https://athleticmma.online'}
                 figureTitle='Figure 1: ATHLETIC MMA'
-                linkTitle="Visit Website"
+                linkTitle="Live Website"
                 />
 
                 <Works
@@ -69,7 +69,7 @@ export default function WorkPage(){
                             '
                 link={'https://chatapp-chi-three.vercel.app'}
                 figureTitle='Figure 2: ChatApp'
-                linkTitle="Visit Website"
+                linkTitle="Live Website"
                 />
                  <Works
                 title='3rd Project: My Creations by Coleen'
@@ -85,7 +85,7 @@ export default function WorkPage(){
                   `}
                 link={'https://mycreationsbycoleen.vercel.app'}
                 figureTitle='Figure 3: My Creations by Coleen'
-                linkTitle="Visit website"
+                linkTitle="Live website"
                 />
                 <Works
                 title='4th Project: Custom Authentication System'

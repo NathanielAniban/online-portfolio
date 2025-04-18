@@ -5,18 +5,38 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Resume from '/Resume.pdf';
 import TechSkillShowcase from "../components/TechSkillShowcase";
+import ProjectCard from "../components/project-card";
+import AthleticMMA from '../assets/works/athletic-mma-background.png';
+import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
 
 export default function Homepage() {
   const navigate = useNavigate();
 
+  const Description = [{
+    img: AthleticMMA,
+    title: 'Athletic MMA Landing Page',
+    desc: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
+           It's a Gym Membership Management Website combining fitness, bodybuilding, and self-defense training.`,
+    status: 'Done'
+        },
+  {  img: MyCreationsbyColeen,
+    title: 'My Creations By Coleen Landing Page',
+    desc: `The 'My Creations by Coleen' specialize on creating
+          a beautiful, personalized digital invitations for birthdays, celebrations, and all kinds of events!.
+          Whether you're planning a kid’s party, a milestone birthday, or any special gathering,
+          I’ll design an invite that matches your theme and vibe perfectly.`,
+    status: 'Done'
+  }
+];
+
   return (
-    <section className="relative flex flex-col sm:p-5 mb-10">
-      <section className="container flex flex-col mx-auto sm:flex-row items-center justify-center px-4 py-8">
+    <section className="relative flex flex-col sm:p-5  mb-10">
+      <section className="container flex flex-col mx-auto sm:flex-row items-center justify-center px-4 mb-10">
         {/* Mobile Header */}
         <section className="flex flex-col text-center sm:hidden mb-6">
           <p className="text-sm text-gray-500">Hello there!</p>
           <TypingEffect
-            styleProp="text-2xl font-bold"
+            styleProp="text-lg font-medium font-mono"
             text="My Name is Nathaniel Aniban"
             speed={50}
             delay={3000}
@@ -25,7 +45,7 @@ export default function Homepage() {
             cursorType="_"
           />
           <TypingEffect
-            styleProp="text-lg font-medium"
+            styleProp="text-sm/2 font-medium font-mono"
             text="Your Full Stack Web Developer"
             speed={50}
             delay={500}
@@ -44,29 +64,32 @@ export default function Homepage() {
         <section className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <section className="hidden sm:block">
             <p className="text-sm text-gray-500">Hello there!</p>
-            <TypingEffect
-              styleProp="text-2xl font-bold"
-              text="My Name is Nathaniel Aniban"
-              speed={50}
-              delay={3000}
-              onRepeat={false}
-              cursorBlink={true}
-              cursorType="_"
-            />
-            <br />
-            <TypingEffect
-              styleProp="text-lg font-medium"
-              text="Your Full Stack Web Developer"
-              speed={50}
-              delay={500}
-              cursorType=""
-            />
+            <p className="text-2xl/3 font-bold font-mono tracking-tight">
+              My Name is&nbsp;
+              <TypingEffect
+                text="Nathaniel Aniban"
+                speed={50}
+                delay={5000}
+                onRepeat={true}
+                cursorBlink={true}
+                cursorType="_"
+              />
+            </p>
+            <p className="text-lg font-medium font-mono tracking-tight">  
+              <TypingEffect
+                text="Your Full Stack Web Developer"
+                speed={50}
+                delay={500}
+                cursorType=""
+              />
+            </p>
           </section>
 
-          <p className="max-w-xl text-sm md:text-base text-gray-700 my-4">
-            I am a web developer with a passion for creating beautiful and functional websites.
-            I specialize in frontend development and love working with the latest technologies
-            to build responsive and user-friendly web applications.
+          <p className="max-w-xl text-sm md:text-base text-gray-700 font-mono tracking-tight my-4">
+            Hi. I'm your aspiring&nbsp;
+            <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">
+              Full Stack Web Developer</u>, I'm open to Freelance Projects.
+            I specialise on <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">frontend/backend web development</u>.
           </p>
 
           {/* Social Icons */}
@@ -101,8 +124,27 @@ export default function Homepage() {
           </section>
         </section>
       </section>
-
-      <TechSkillShowcase />
+      <section className="flex flex-col flex-wrap gap-2 justify-center items-center">
+        <TechSkillShowcase />
+        <section className="block">
+          <h1 className="text-base font-medium text-center mb-2">My Projects</h1>
+          <article className="grid grid-cols-2 gap-2">
+            {
+              Description.map(card => (
+                <section>
+                  <ProjectCard
+                  img={card.img}
+                  title={card.title}
+                  description={card.desc}
+                  status={card.status}
+                  />
+                </section>
+              ))
+            }
+            
+          </article>
+        </section>
+      </section>
     </section>
   );
 
