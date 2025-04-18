@@ -1,6 +1,8 @@
 import AthleticMMA from '../assets/works/athletic-mma-background.png';
 import ChatApp from '../assets/works/chatapp-background.png';
 import CustomAutBG from '../assets/works/Authentication-Login-Background.png';
+import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
+
 import { Link } from 'react-router-dom';
 
 
@@ -52,7 +54,7 @@ export default function WorkPage(){
                             '
                 link={'https://athleticmma.online'}
                 figureTitle='Figure 1: ATHLETIC MMA'
-                linkTitle="Visit our Website"
+                linkTitle="Visit Website"
                 />
 
                 <Works
@@ -67,14 +69,30 @@ export default function WorkPage(){
                             '
                 link={'https://chatapp-chi-three.vercel.app'}
                 figureTitle='Figure 2: ChatApp'
-                linkTitle="Visit my Website"
+                linkTitle="Visit Website"
+                />
+                 <Works
+                title='3rd Project: My Creations by Coleen'
+                img={MyCreationsbyColeen}
+                article={`
+                        The 'My Creations by Coleen' is a landing page that promotes wonderful designs where she specialize on creating
+                        a beautiful, personalized digital invitations for birthdays, celebrations, and all kinds of events!.
+                        Whether you're planning a kid’s party, a milestone birthday, or any special gathering,
+                        I’ll design an invite that matches your theme and vibe perfectly.
+                        <br/><br/>
+                        This website uses <strong>React/Vite</strong>, <strong>Tailwind CSS </strong> and <strong>Vercel </strong> to publish
+                        the website
+                  `}
+                link={'https://mycreationsbycoleen.vercel.app'}
+                figureTitle='Figure 3: My Creations by Coleen'
+                linkTitle="Visit website"
                 />
                 <Works
-                title='3rd Project: Custom Authentication System'
+                title='4th Project: Custom Authentication System'
                 img={CustomAutBG}
                 article='   This is a full-stack Authentication System built with a focus on security, speed, and developer-friendly implementation. It features a Single Page Application (SPA) using React/Vite + TypeScript for the frontend and CodeIgniter 4 (PHP Framework) for the backend API.'
                 link={'https://github.com/NathanielAniban/auth_w_security'}
-                figureTitle='Figure 3: Custom Authentication System'
+                figureTitle='Figure 4: Custom Authentication System'
                 linkTitle="Check out my Code"
                 />
             </section>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import AthleticMMA from '../assets/works/athletic-mma-background.png';
 import ChatApp from '../assets/works/chatapp-background.png';
-
+import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
 
 export default function TechSkillShowcase(){
 
@@ -71,13 +71,16 @@ export default function TechSkillShowcase(){
                 desc: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
                        It's a Gym Membership Management Website combining fitness, bodybuilding, and self-defense training.`,
                 status: 'Done'
-                    }, {
-                img: ChatApp,
-                title: 'ChatApp Landing Page',
-                desc: `ChatApp is a real-time web chat application with Firebase authentication and messaging.
-                       A personal project focused on seamless communication and modern tech.`,
-                status: 'N/A'
-              }].map((proj, i) => (
+                    },
+              {  img: MyCreationsbyColeen,
+                title: 'My Creations By Coleen Landing Page',
+                desc: `The 'My Creations by Coleen' specialize on creating
+                      a beautiful, personalized digital invitations for birthdays, celebrations, and all kinds of events!.
+                      Whether you're planning a kid’s party, a milestone birthday, or any special gathering,
+                      I’ll design an invite that matches your theme and vibe perfectly.`,
+                status: 'Done'
+              }
+            ].map((proj, i) => (
                 <figure key={i} className="p-3 border shadow-md rounded flex flex-col">
                   <img src={proj.img} alt={proj.title} className="rounded mb-3" />
                   <figcaption className="text-sm font-medium text-center mb-2">{proj.title}</figcaption>
