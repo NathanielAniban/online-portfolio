@@ -3,7 +3,7 @@ import formalImage from '../assets/Formal-photo.jpg';
 import TypingEffect from "../components/typing-effect";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Resume from '/Resume.pdf';
+//import Resume from '/Resume.pdf';
 import TechSkillShowcase from "../components/TechSkillShowcase";
 import ProjectCard from "../components/project-card";
 import AthleticMMA from '../assets/works/athletic-mma-background.png';
