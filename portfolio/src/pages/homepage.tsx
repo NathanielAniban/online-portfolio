@@ -36,7 +36,7 @@ export default function Homepage() {
         <section className="flex flex-col text-center sm:hidden mb-6">
           <p className="text-sm text-gray-500">Hello there!</p>
           <TypingEffect
-            styleProp="text-lg font-medium font-mono"
+            styleProp="text-2xl/6 font-bold font-mono"
             text="My Name is Nathaniel Aniban"
             speed={50}
             delay={3000}
@@ -45,7 +45,7 @@ export default function Homepage() {
             cursorType="_"
           />
           <TypingEffect
-            styleProp="text-sm/2 font-medium font-mono"
+            styleProp="text-sm font-medium font-mono"
             text="Your Full Stack Web Developer"
             speed={50}
             delay={500}
@@ -64,7 +64,7 @@ export default function Homepage() {
         <section className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <section className="hidden sm:block">
             <p className="text-sm text-gray-500">Hello there!</p>
-            <p className="text-2xl/3 font-bold font-mono tracking-tight">
+            <p className="text-2xl/5 font-bold font-mono tracking-tight">
               My Name is&nbsp;
               <TypingEffect
                 text="Nathaniel Aniban"
@@ -110,14 +110,14 @@ export default function Homepage() {
 
           {/* Buttons */}
           <section className="flex flex-wrap gap-4">
-            <Link to={Resume} target="_blank">
-              <button className="text-sm font-medium bg-gray-200 hover:bg-gray-300 active:bg-gray-400 transition px-5 py-2 rounded shadow">
-                Download CV
+              <button className="text-sm font-medium bg-gray-200 hover:bg-gray-300 active:bg-gray-400 
+              transition px-5 py-2 rounded shadow w-full sm:w-auto">
+                Download CV (Unavailable)
               </button>
-            </Link>
             <button
               onClick={() => navigate('/about')}
-              className="text-sm font-medium bg-gray-800 text-white hover:bg-gray-900 active:bg-black transition px-5 py-2 rounded flex items-center gap-2"
+              className="text-sm font-medium bg-gray-800 text-white hover:bg-gray-900 active:bg-black 
+              transition px-5 py-2 rounded flex items-center gap-2 justify-center w-full sm:w-auto"
             >
               Learn More <ArrowRight size={22} />
             </button>

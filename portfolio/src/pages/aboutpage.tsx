@@ -12,8 +12,8 @@ export default function AboutPage() {
           {/* Mobile View Intro Text */}
           <section className="flex flex-col text-center md:hidden">
           <p className="text-sm text-gray-500">Hello there!</p>
-          <TypingEffect
-            styleProp="text-lg font-medium font-mono"
+           <TypingEffect
+            styleProp="text-2xl/6 font-bold font-mono"
             text="My Name is Nathaniel Aniban"
             speed={50}
             delay={3000}
@@ -22,7 +22,7 @@ export default function AboutPage() {
             cursorType="_"
           />
           <TypingEffect
-            styleProp="text-sm/2 font-medium font-mono"
+            styleProp="text-sm font-medium font-mono"
             text="Your Full Stack Web Developer"
             speed={50}
             delay={500}

@@ -20,7 +20,7 @@ export default function TechSkillShowcase(){
       ];
 
     return(
-        <section className="px-4 md:py-7">
+        <section className="px-2 md:py-7">
         <section className="block gap-2">
           {/* Tech Stack + Frameworks */}
           <article className="flex flex-col items-center">
