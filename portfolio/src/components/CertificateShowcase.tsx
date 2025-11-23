@@ -20,7 +20,7 @@ import IntroToCyberSecurity from '/certificates/Nathaniel, Aniban Villa-Cybersec
 import { useState } from 'react';
 import PdfModal from './PdfModal';
 
-const netacadIcon : string = 'https://www.supdevinci.fr/wp-content/uploads/2021/02/cisco-400.png';
+const netacadIcon : string = 'https://www.equtechnology.com/wp-content/uploads/2024/01/Cisco-Networking-Academy.svg.png';
 const AMALogo : string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe_3W563HQXdnbOQcPXqARw7jxzcc3X86A7w&s';
 
 const Certificates = [
