@@ -59,7 +59,7 @@ export default function AboutPage() {
             </div>
         </hgroup>
       </header>
-      <section className="w-[240mm] self-center grid p-4 md:p-10">
+      <section className="lg:w-[240mm] self-center grid p-4 md:p-10">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Education & Work Experience */}
           <section className="space-y-6">

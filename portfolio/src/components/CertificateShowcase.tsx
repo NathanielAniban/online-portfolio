@@ -168,7 +168,7 @@ const Certificates = [
     
       return (
         <>
-          <ol className="grid lg:grid-cols-2 gap-2 overflow-y-scroll overflow-x-hidden h-[50vh]">
+          <ol className="grid grid-cols-2 gap-2 overflow-y-scroll overflow-x-hidden h-[50vh]">
             {Certificates.map((cert, index) => (
             <li
               key={index} 
