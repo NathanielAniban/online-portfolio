@@ -3,6 +3,7 @@ import formalImage from '../assets/Formal-photo.jpg';
 import TypingEffect from "../components/typing-effect";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import CardCarousel from "../components/CardCarousel";
 //import Resume from '/Resume.pdf';
 import TechSkillShowcase from "../components/TechSkillShowcase";
 import ProjectCard from "../components/project-card";
@@ -11,13 +12,12 @@ import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
 
 export default function Homepage() {
   const navigate = useNavigate();
-
   const Description = [{
     img: AthleticMMA,
     title: 'Athletic MMA Landing Page',
     desc: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
            It's a Gym Membership Management Website combining fitness, bodybuilding, and self-defense training.`,
-    status: 'Done'
+    status: 'Done/Expired'
         },
   {  img: MyCreationsbyColeen,
     title: 'My Creations By Coleen Landing Page',
@@ -30,122 +30,104 @@ export default function Homepage() {
 ];
 
   return (
-    <section className="relative flex flex-col sm:p-5  mb-10">
-      <section className="container flex flex-col mx-auto sm:flex-row items-center justify-center px-4 mb-10">
-        {/* Mobile Header */}
-        <section className="flex flex-col text-center sm:hidden mb-6">
-          <p className="text-sm text-gray-500">Hello there!</p>
-          <TypingEffect
-            styleProp="text-2xl/6 font-bold font-mono"
-            text="My Name is Nathaniel Aniban"
-            speed={50}
-            delay={3000}
-            onRepeat={false}
-            cursorBlink={true}
-            cursorType="_"
+    <main className="relative grid grid-cols-3 py-2 border">
+      <header 
+      className="flex flex-col col-span-3 sm:flex-row items-center 
+      justify-center ">
+         <img
+                src={formalImage}
+                alt="Profile"
+                className="h-[25vh] bg-gray-50 rounded-full shadow-lg 
+                mx-6 my-5 sm:mb-0"
           />
-          <TypingEffect
-            styleProp="text-sm font-medium font-mono"
-            text="Your Full Stack Web Developer"
-            speed={50}
-            delay={500}
-            cursorType=""
-          />
-        </section>
-
-        {/* Image */}
-        <img
-          src={formalImage}
-          alt="Profile"
-          className="h-[25vh] bg-gray-50 rounded-full shadow-lg mx-6 my-5 sm:mb-0"
-        />
-
-        {/* Desktop Content */}
-        <section className="flex flex-col items-center sm:items-start text-center sm:text-left">
-          <section className="hidden sm:block">
+        <hgroup className="block grid text-center 
+        sm:text-start mx-2 sm:my-5">
             <p className="text-sm text-gray-500">Hello there!</p>
-            <p className="text-2xl/5 font-bold font-mono tracking-tight">
-              My Name is&nbsp;
-              <TypingEffect
-                text="Nathaniel Aniban"
-                speed={50}
-                delay={5000}
-                onRepeat={true}
-                cursorBlink={true}
-                cursorType="_"
-              />
+                <TypingEffect
+                  styleProp="text-2xl/6 font-bold font-mono"
+                  text="Nathaniel Aniban"
+                  speed={50}
+                  delay={3000}
+                  onRepeat={false}
+                  cursorBlink={true}
+                  cursorType="_"
+                />
+                <TypingEffect
+                  styleProp="text-sm font-medium font-mono"
+                  text="Your Full Stack Developer | Technical Support"
+                  speed={50}
+                  delay={500}
+                  cursorType=""
+                />
+            <p className="max-w-xl text-sm md:text-base text-gray-700 font-mono tracking-tight my-4">
+              Hi. I'm your aspiring&nbsp;
+              <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">
+                Full Stack Web Developer</u>, I'm open to Freelance Projects.
+              I specialise on <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">frontend/backend web development</u>.
             </p>
-            <p className="text-lg font-medium font-mono tracking-tight">  
-              <TypingEffect
-                text="Your Full Stack Web Developer"
-                speed={50}
-                delay={500}
-                cursorType=""
-              />
-            </p>
-          </section>
-
-          <p className="max-w-xl text-sm md:text-base text-gray-700 font-mono tracking-tight my-4">
-            Hi. I'm your aspiring&nbsp;
-            <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">
-              Full Stack Web Developer</u>, I'm open to Freelance Projects.
-            I specialise on <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">frontend/backend web development</u>.
-          </p>
-
-          {/* Social Icons */}
-          <section className="flex gap-4 mb-5">
-            <Link to="https://www.facebook.com/Aniban.Nathaniel" target="_blank">
-              <Facebook className="text-gray-800 hover:text-gray-600" size={25} />
-            </Link>
-            <Link to="https://www.instagram.com/urmirr0r_/" target="_blank">
-              <Instagram className="text-gray-800 hover:text-gray-600" size={25} />
-            </Link>
-            <Link to="https://www.linkedin.com/in/nathaniel-aniban-48643a287/" target="_blank">
-              <Linkedin className="text-gray-800 hover:text-gray-600" size={25} />
-            </Link>
-            <Link to="https://github.com/NathanielAniban" target="_blank">
-              <Github className="text-gray-800 hover:text-gray-600" size={25} />
-            </Link>
-          </section>
-
-          {/* Buttons */}
-          <section className="flex flex-wrap gap-4">
-              <button className="text-sm font-medium bg-gray-200 hover:bg-gray-300 active:bg-gray-400 
-              transition px-5 py-2 rounded shadow w-full sm:w-auto">
-                Download CV (Unavailable)
-              </button>
-            <button
-              onClick={() => navigate('/about')}
-              className="text-sm font-medium bg-gray-800 text-white hover:bg-gray-900 active:bg-black 
-              transition px-5 py-2 rounded flex items-center gap-2 justify-center w-full sm:w-auto"
-            >
-              Learn More <ArrowRight size={22} />
-            </button>
-          </section>
+            <div className="grid gap-2">
+              <section className="flex justify-center sm:justify-start gap-4 mb-2">
+                  <Link to="https://www.facebook.com/Aniban.Nathaniel" target="_blank">
+                    <Facebook className="text-gray-800 hover:text-gray-600" size={25} />
+                  </Link>
+                  <Link to="https://www.instagram.com/urmirr0r_/" target="_blank">
+                    <Instagram className="text-gray-800 hover:text-gray-600" size={25} />
+                  </Link>
+                  <Link to="https://www.linkedin.com/in/nathaniel-aniban-48643a287/" target="_blank">
+                    <Linkedin className="text-gray-800 hover:text-gray-600" size={25} />
+                  </Link>
+                  <Link to="https://github.com/NathanielAniban" target="_blank">
+                    <Github className="text-gray-800 hover:text-gray-600" size={25} />
+                  </Link>
+            </section>
+              <div className="flex gap-2">
+                <button
+                className="text-sm font-medium bg-teal-800 text-white 
+                  h-full    
+                  hover:bg-teal-900 active:bg-teal-800 
+                  transition px-5 py-2 rounded shadow w-full sm:w-auto mb-2"
+                >
+                  <a href="https://www.credly.com/users/nathaniel-aniban/badges" target="_blank"  
+                  > Visit My Credly
+                  </a>
+                </button>
+                <button
+                  onClick={() => navigate('/about')}
+                  className="text-sm font-medium bg-gray-800 text-white hover:bg-gray-900 active:bg-black 
+                  transition px-5 py-2 rounded flex items-center gap-2 justify-center w-full sm:w-auto"
+                >
+                  Learn More <ArrowRight size={22} />
+                </button>
+              </div>
+            </div>
+        </hgroup>
+      </header>
+      <section className="grid col-span-3 items-center justify-center">
+        <section className="w-full sm:w-[220mm] p-4">
+          <ul className="flex flex-col items-start gap-2">
+            <CardCarousel/>
+          </ul>
+        </section>  
+        <section className="block w-full sm:w-[220mm] p-4">
+           <h1 className="text-base font-bold text-center mb-2">My Projects</h1>
+                <article className="grid grid-cols-2 gap-2">
+                  {
+                    Description.map(card => (
+                      <section>
+                        <ProjectCard
+                        img={card.img}
+                        title={card.title}
+                        description={card.desc}
+                        status={card.status}
+                        />
+                      </section>
+                    ))
+                  }
+                  
+                </article>
         </section>
       </section>
-      <section className="flex flex-col flex-wrap gap-2 justify-center items-center">
-        <TechSkillShowcase />
-        <section className="block">
-          <h1 className="text-base font-medium text-center mb-2">My Projects</h1>
-          <article className="grid grid-cols-2 gap-2">
-            {
-              Description.map(card => (
-                <section>
-                  <ProjectCard
-                  img={card.img}
-                  title={card.title}
-                  description={card.desc}
-                  status={card.status}
-                  />
-                </section>
-              ))
-            }
-            
-          </article>
-        </section>
-      </section>
-    </section>
+    </main>
   );
 
 }

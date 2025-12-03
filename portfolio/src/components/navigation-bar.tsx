@@ -11,7 +11,7 @@ const NavigationBar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Works", path: "/work" },
-    { name: "Contact", path: "/contact" },
+    { name: "Resume", path: "/resume" },
   ];
 
   const handleNavigation = (path: string) => {
@@ -21,7 +21,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <header className="sticky print:hidden top-0 z-50 bg-white">
       <nav className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-5">
         {/* Logo */}
         <section

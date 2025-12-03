@@ -3,7 +3,7 @@ import Layout from "../pages";
 import Homepage from "../pages/homepage";
 import AboutPage from "../pages/aboutpage";
 import WorkPage from "../pages/workspage";
-import ContactPage from "../pages/contactpage";
+import ResumePage from "../pages/resumepage";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
             {index: true, element: <Homepage/>},
             {path: "/about", element: <AboutPage/>},
             {path: "/work", element: <WorkPage/>},
-            {path: "/contact", element: <ContactPage/>},
+            {path: "/resume", element: <ResumePage/>},
         ],
         errorElement: <div>404</div>,
     }

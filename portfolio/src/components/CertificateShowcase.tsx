@@ -168,23 +168,49 @@ const Certificates = [
     
       return (
         <>
-          <ol className="grid  lg:grid-cols-2 gap-2 overflow-y-scroll overflow-x-hidden h-[40vh]">
-            {Certificates.map((certificate, index) => (
-              <li
-                key={index}
-                onClick={() => handleOpenModal(certificate.path)}
-                className="cursor-pointer bg-gray-50 flex shadow-md rounded-lg p-2 mx-1
-                hover:scale-105 hover:bg-gray-50 active:bg-gray-100 
-                active:scale-95 transition duration-150 ease-in-out"
-              >
-                <img src={certificate.imagePath} className="h-20 w-20" alt={certificate.name} />
-                <section>
-                  <h5 className="text-sm/4 font-medium">{certificate.name}</h5>
-                  <h6 className="text-xs font-medium text-gray-500">{certificate.type}</h6>
-                  <p className="text-xs font-bold text-gray-700">{certificate.focusOn}</p>
-                </section>
-              </li>
-            ))}
+          <ol className="grid lg:grid-cols-2 gap-2 overflow-y-scroll overflow-x-hidden h-[50vh]">
+            {Certificates.map((cert, index) => (
+            <li
+              key={index} 
+              // Added items-center and text-center for centralized content
+              className="flex flex-col items-center 
+              text-center p-3 border border-gray-200 rounded-lg bg-white shadow-md 
+              transition-all duration-300 hover:shadow-lg hover:border-indigo-400 group
+              hover:cursor-pointer"
+              title={cert.name}
+              onClick={() => handleOpenModal(cert.path)}
+            >
+              
+              {/* === Standard Image/Logo Section (Enlarged and Centralized) === */}
+              <div className="mb-3 p-1.5 bg-white border-2 border-indigo-500 rounded-full shadow-lg">
+                <img
+                  src={cert.imagePath}
+                  alt={cert.type}
+                  // Increased size for prominence
+                  className="size-12 rounded-full flex-shrink-0"
+                  onError={(e) => { 
+                    (e.target as HTMLImageElement).onerror = null; 
+                    (e.target as HTMLImageElement).src = `https://placehold.co/48x48/A0A0A0/ffffff?text=?`;
+                  }}
+                />
+              </div>
+              
+              {/* Title Section */}
+              <h3 className="text-sm font-semibold text-gray-800 leading-snug group-hover:text-indigo-600 transition-colors
+              break-all">
+                {cert.name}
+              </h3>
+              {/* Bottom Section: Focus Area and Type */}
+              <div className="mt-auto border-dashed border-gray-100 space-y-1 w-full">
+                <p className="text-xs text-indigo-700 font-medium bg-indigo-100 rounded-full px-2 py-0.5 w-fit mx-auto">
+                  {cert.focusOn}
+                </p>
+                <p className="text-xs text-gray-400">
+                  Type: {cert.type}
+                </p>
+              </div>
+            </li>
+          ))}
           </ol>
     
           {/* Modal */}

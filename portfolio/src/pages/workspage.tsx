@@ -54,7 +54,7 @@ export default function WorkPage(){
                             '
                 link={'https://athleticmma.online'}
                 figureTitle='Figure 1: ATHLETIC MMA'
-                linkTitle="Live Website"
+                linkTitle="Live Website | Shutdown"
                 />
 
                 <Works
