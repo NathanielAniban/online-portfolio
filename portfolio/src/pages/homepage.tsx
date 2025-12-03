@@ -120,7 +120,7 @@ export default function Homepage() {
           </ul>
         </section>  
       
-        <section className="sm:grid sm:grid-cols-2 gap-2 p-4 mt-4">
+        <section className="flex flex-col sm:grid sm:grid-cols-2 gap-2 p-4 mt-4">
                 <h1 className="text-base font-bold col-span-2 text-center mb-2">My Projects</h1>
                 <ProjectCard {...Description[0]} />
                 <ProjectCard {...Description[1]} />
