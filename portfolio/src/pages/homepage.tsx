@@ -11,25 +11,37 @@ import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
 
 export default function Homepage() {
   const navigate = useNavigate();
-  const Description = [{
+
+  interface ProjectProps {
+  img: string;
+  title: string;
+  description: string;
+  status: 'Complete' | 'In Progress' | 'On Hold';
+  linkUrl: string; // Added explicit URL for the button
+}
+
+  const Description: ProjectProps[] = [{
     img: AthleticMMA,
     title: 'Athletic MMA Landing Page',
-    desc: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
+    description: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
            It's a Gym Membership Management Website combining fitness, bodybuilding, and self-defense training.`,
-    status: 'Done/Expired'
+    status: "Complete",
+    linkUrl: "#athletic-mma"
+
         },
   {  img: MyCreationsbyColeen,
     title: 'My Creations By Coleen Landing Page',
-    desc: `The 'My Creations by Coleen' specialize on creating
+    description: `The 'My Creations by Coleen' specialize on creating
           a beautiful, personalized digital invitations for birthdays, celebrations, and all kinds of events!.
           Whether you're planning a kid’s party, a milestone birthday, or any special gathering,
           I’ll design an invite that matches your theme and vibe perfectly.`,
-    status: 'Done'
+    status: "Complete",
+    linkUrl: "#mycreationsbycoleen"
   }
 ];
 
   return (
-    <main className="relative grid grid-cols-3 py-2 border">
+    <main className="relative flex flex-col py-2 border">
       <header 
       className="flex flex-col col-span-3 sm:flex-row items-center 
       justify-center ">
@@ -101,30 +113,21 @@ export default function Homepage() {
             </div>
         </hgroup>
       </header>
-      <section className="grid col-span-3 items-center justify-center">
-        <section className="w-full sm:w-[220mm] p-4">
+      <section className="flex flex-col items-center justify-center">
+        <section className="w-full md:w-[220mm]">
           <ul className="flex flex-col items-start gap-2">
             <CardCarousel/>
           </ul>
         </section>  
-        <section className="block w-full sm:w-[220mm] p-4">
-           <h1 className="text-base font-bold text-center mb-2">My Projects</h1>
-                <article className="grid grid-cols-2 gap-2">
-                  {
-                    Description.map(card => (
-                      <section>
-                        <ProjectCard
-                        img={card.img}
-                        title={card.title}
-                        description={card.desc}
-                        status={card.status}
-                        />
-                      </section>
-                    ))
-                  }
-                  
-                </article>
-        </section>
+        {
+          true && 
+          <section className="flex flex-col gap-2 md:grid md:grid-cols-2 gap-2 p-4">
+                  <h1 className="text-base font-bold col-span-2 text-center mb-2">My Projects</h1>
+                  <ProjectCard {...Description[0]} />
+                  <ProjectCard {...Description[1]} />
+          </section>
+        }
+        
       </section>
     </main>
   );

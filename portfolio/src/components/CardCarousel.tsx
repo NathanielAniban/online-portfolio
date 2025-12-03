@@ -39,9 +39,11 @@ const CardCarousel: React.FC = () => {
       {/* CAROUSEL CONTAINER (Track) */}
       <h3 className="text-base font-bold text-center mb-4">Web Related Skills</h3>
           
-      <div className="carousel-track w-full max-w-9xl overflow-hidden mb-5 ">
+      <div className="carousel-track w-full
+       sm:max-w-xl md:max-w-3xl
+      overflow-hidden mb-5 ">
         {/* The width of this div is automatically large due to its children, allowing the scroll. */}
-        <div className="flex w-fit animate-marquee">
+        <div className="flex w-fit animate-marquee mb-2">
           {marqueeItems.map((lang, index) => (
             <div
               key={index} 
@@ -68,7 +70,9 @@ const CardCarousel: React.FC = () => {
         </div>
       </div>
 
-      <div className="carousel-track w-full max-w-9xl overflow-hidden ">
+      <div className="carousel-track w-full
+        sm:max-w-xl md:max-w-3xl 
+      overflow-hidden ">
         {/* The width of this div is automatically large due to its children, allowing the scroll. */}
         <div className="flex w-fit animate-marquee">
           {marqueeFrameworks.map((lang, index) => (
@@ -95,10 +99,10 @@ const CardCarousel: React.FC = () => {
             </div>
           ))}
         </div>
+        </div>
+        
       </div>
       
-      
-    </div>
   );
 };
 
