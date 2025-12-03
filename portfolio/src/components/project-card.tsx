@@ -34,10 +34,10 @@ const ProjectCard: React.FC<ProjectProps> = ({ img, title, description, status, 
             (e.target as HTMLImageElement).src = "https://placehold.co/400x160/F3F4F6/9CA3AF?text=No+Image";
         }}
 />
-        <figcaption className="text-lg font-bold text-gray-800 mb-2">{title}</figcaption>
+        <figcaption className="text-medium sm:text-lg font-bold text-gray-800 mb-2">{title}</figcaption>
         
       {/* Description */}
-      <p className="text-sm text-gray-600 line-clamp-3 mb-4 flex-grow">
+      <p className="text-xs sm:text-sm text-gray-600 line-clamp-3 mb-4 flex-grow">
         {description}
       </p>
       

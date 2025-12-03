@@ -44,7 +44,7 @@ export default function Homepage() {
     <main className="relative flex flex-col py-2 border">
       <header 
       className="flex flex-col col-span-3 sm:flex-row items-center 
-      justify-center ">
+      justify-center mb-5">
          <img
                 src={formalImage}
                 alt="Profile"
@@ -113,20 +113,19 @@ export default function Homepage() {
             </div>
         </hgroup>
       </header>
-      <section className="flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center mb-4">
         <section className="w-full md:w-[220mm]">
           <ul className="flex flex-col items-start gap-2">
             <CardCarousel/>
           </ul>
         </section>  
-        {
-          true && 
-          <section className="flex flex-col gap-2 md:grid md:grid-cols-2 gap-2 p-4">
-                  <h1 className="text-base font-bold col-span-2 text-center mb-2">My Projects</h1>
-                  <ProjectCard {...Description[0]} />
-                  <ProjectCard {...Description[1]} />
-          </section>
-        }
+      
+        <section className="sm:grid sm:grid-cols-2 gap-2 p-4 mt-4">
+                <h1 className="text-base font-bold col-span-2 text-center mb-2">My Projects</h1>
+                <ProjectCard {...Description[0]} />
+                <ProjectCard {...Description[1]} />
+        </section>
+        
         
       </section>
     </main>
