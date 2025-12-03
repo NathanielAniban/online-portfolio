@@ -20,6 +20,14 @@ const NavigationBar = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+   const linkBaseClasses = `
+        relative  hover:text-blue-600 
+        after:content-[''] after:absolute after:bottom-2 after:left-0 after:h-[2px] after:w-full 
+        after:bg-blue-600 
+        after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
+        cursor-pointer
+    `;
+
   return (
     <header className="sticky print:hidden top-0 z-50 bg-white">
       <nav className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-5">
@@ -60,9 +68,11 @@ const NavigationBar = () => {
                 onClick={() => handleNavigation(item.path)}
                 className={`cursor-pointer py-2 rounded-md text-center md:text-left transition-colors ${
                   location.pathname === item.path
-                    ? "text-blue-600 font-semibold underline"
-                    : "text-gray-700 hover:text-blue-500"
-                }`}
+                    ? "after:scale-x-100 font-semibold"
+                    : ""
+                }
+                ${linkBaseClasses}
+                `}
               >
                 {item.name}
               </li>

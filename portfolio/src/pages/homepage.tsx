@@ -41,7 +41,7 @@ export default function Homepage() {
 ];
 
   return (
-    <main className="relative flex flex-col py-2 border">
+    <main className="relative flex flex-col py-2">
       <header 
       className="flex flex-col col-span-3 sm:flex-row items-center 
       justify-center mb-5">

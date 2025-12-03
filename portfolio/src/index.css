@@ -18,7 +18,7 @@
     }
   }
 }
-
+@custom-variant dark (&:where(.dark, .dark *));
  @keyframes marquee {
           0% { transform: translateX(0); }
           /* Scroll exactly one full copy of the content to the left */
