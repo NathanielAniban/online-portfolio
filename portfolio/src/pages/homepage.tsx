@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CardCarousel from "../components/CardCarousel";
 //import Resume from '/Resume.pdf';
-import TechSkillShowcase from "../components/TechSkillShowcase";
 import ProjectCard from "../components/project-card";
 import AthleticMMA from '../assets/works/athletic-mma-background.png';
 import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
