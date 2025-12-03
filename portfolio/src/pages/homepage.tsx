@@ -26,7 +26,7 @@ export default function Homepage() {
     description: `Athletic MMA is an E-Commerce Website offering exclusive gym offers, training, and classes. 
            It's a Gym Membership Management Website combining fitness, bodybuilding, and self-defense training.`,
     status: "Complete",
-    linkUrl: "#athletic-mma"
+    linkUrl: "/work"
 
         },
   {  img: MyCreationsbyColeen,
@@ -36,7 +36,7 @@ export default function Homepage() {
           Whether you're planning a kid’s party, a milestone birthday, or any special gathering,
           I’ll design an invite that matches your theme and vibe perfectly.`,
     status: "Complete",
-    linkUrl: "#mycreationsbycoleen"
+    linkUrl: "https://mycreationsbycoleen.vercel.app"
   }
 ];
 
@@ -65,7 +65,7 @@ export default function Homepage() {
                 />
                 <TypingEffect
                   styleProp="text-sm font-medium font-mono"
-                  text="Your Full Stack Developer | Technical Support"
+                  text="Full Stack Developer | Technical Support"
                   speed={50}
                   delay={500}
                   cursorType=""
@@ -73,7 +73,7 @@ export default function Homepage() {
             <p className="max-w-xl text-sm md:text-base text-gray-700 font-mono tracking-tight my-4">
               Hi. I'm your aspiring&nbsp;
               <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">
-                Full Stack Web Developer</u>, I'm open to Freelance Projects.
+                Full Stack Developer</u>, I'm open to Freelance Projects.
               I specialise on <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">frontend/backend web development</u>.
             </p>
             <div className="grid gap-2">

@@ -30,7 +30,7 @@ export default function AboutPage() {
                 />
                 <TypingEffect
                   styleProp="text-sm font-medium font-mono"
-                  text="Your Full Stack Developer | Technical Support"
+                  text="Full Stack Developer | Technical Support"
                   speed={50}
                   delay={500}
                   cursorType=""
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <p className="max-w-xl text-sm md:text-base text-gray-700 font-mono tracking-tight my-4">
               Hi. I'm your aspiring&nbsp;
               <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">
-                Full Stack Web Developer</u>, I'm open to Freelance Projects.
+                Full Stack Developer</u>, I'm open to Freelance Projects.
               I specialise on <u className="font-bold hover:text-lg transition-all ease-in-out duration-150">frontend/backend web development</u>.
             </p>
             <div className="grid gap-2">

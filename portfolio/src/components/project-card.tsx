@@ -1,17 +1,16 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 // --- Interface for Project Properties (Modern TS Practice) ---
 interface ProjectProps {
     img: string;
     title: string;
     description: string;
     status: 'Complete' | 'In Progress' | 'On Hold';
-  linkUrl: string; // Added explicit URL for the button
 }
 
 // --- Project Card Component ---
-const ProjectCard: React.FC<ProjectProps> = ({ img, title, description, status, linkUrl }) => {
-    
+const ProjectCard: React.FC<ProjectProps> = ({ img, title, description, status }) => {
+    const navigate = useNavigate();
   // Determine status color
   const statusColor = status === 'Complete' 
     ? 'bg-green-100 text-green-700 border-green-300' 
@@ -48,14 +47,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ img, title, description, status, 
         </p>
         
         {/* Action Button (Fixed: Replaced <Link> with standard <a>) */}
-        <a 
-          href={linkUrl} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-className="text-sm font-medium bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-indigo-700 shadow-md"
->
+        <p 
+        onClick={() => navigate('/work')}
+        className="hover:cursor-pointer text-sm font-medium bg-gray-900 text-white px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-indigo-700 shadow-md">
           Learn more
-        </a>
+        </p>
       </div>
       </figure>
     );
