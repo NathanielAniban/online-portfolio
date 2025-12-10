@@ -4,6 +4,7 @@ import TypingEffect from "../components/typing-effect";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CardCarousel from "../components/CardCarousel";
+import useScreenSize from "../hooks/useScreenSize";
 //import Resume from '/Resume.pdf';
 import ProjectCard from "../components/project-card";
 import AthleticMMA from '../assets/works/athletic-mma-background.png';
@@ -11,6 +12,8 @@ import MyCreationsbyColeen from '../assets/works/mycreationsbycoleen.png'
 
 export default function Homepage() {
   const navigate = useNavigate();
+  const { height } = useScreenSize();
+  const isLargeScreen =  height !== undefined && height >= 500;
 
   interface ProjectProps {
   img: string;
@@ -48,8 +51,8 @@ export default function Homepage() {
          <img
                 src={formalImage}
                 alt="Profile"
-                className="h-[25vh] bg-gray-50 rounded-full shadow-lg 
-                mx-6 my-5 sm:mb-0"
+                className={`${isLargeScreen ? "h-[25vh]" : "h-[60vh]"} bg-gray-50 rounded-full shadow-lg 
+                mx-6 my-5 sm:mb-0`}
           />
         <hgroup className="block grid text-center 
         sm:text-start mx-2 sm:my-5">

@@ -17,7 +17,7 @@ export default function Layout() {
                         duration: 0.5,
                         ease: "easeInOut",
                     }}
-                    className="mx-3 md:mx-0"
+                    className="mx-3 md:mx-0 flex-grow"
                 >
                     <Outlet />
                 </motion.main>

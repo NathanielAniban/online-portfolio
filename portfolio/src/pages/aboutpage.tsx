@@ -1,10 +1,14 @@
 import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 import formalImage from '../assets/Formal-photo.jpg';
 import TypingEffect from "../components/typing-effect";
-
+import useScreenSize from "../hooks/useScreenSize";
 import CertificateShowcase from "../components/CertificateShowcase";
 import { Link } from "react-router-dom";
 export default function AboutPage() {
+
+  const { height } = useScreenSize();
+  const isLargeScreen =  height !== undefined && height >= 500;
+
   return (
     <main className="relative flex flex-col">
        <header 
@@ -13,8 +17,8 @@ export default function AboutPage() {
          <img
                 src={formalImage}
                 alt="Profile"
-                className="h-[25vh] bg-gray-50 rounded-full shadow-lg 
-                mx-6 my-5 sm:mb-0"
+                className={`${isLargeScreen ? "h-[25vh]" : "h-[60vh]"} bg-gray-50 rounded-full shadow-lg 
+                mx-6 my-5 sm:mb-0`}
           />
         <hgroup className="block grid text-center 
         sm:text-start mx-2 sm:my-5">
